@@ -67,4 +67,15 @@ body {
     gap: 20px;
 }
 .icon{ font-size: 200px;}
+.btn-icon {
+	position: relative;
+	/* padding-inline-end:  40px; Adjust this value to control the overlap */
+  }
+
+  .btn-icon i {
+	position: absolute;
+	top: 50%;
+	left: 50%; /* Adjust this value to control the horizontal position of the icon */
+	transform: translateY(-50%);
+  }
   
