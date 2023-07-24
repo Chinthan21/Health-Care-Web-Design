@@ -8,6 +8,10 @@ body {
 .bi bi-facebook{
 	color: blue;
 }
+.btn-btn-info-p-5-rounded-circle{
+    line-height: 1;
+   
+}
 .form-control{
 	border-top: none;
 	border-left: none;
@@ -43,12 +47,6 @@ body {
 .rounded-circle {
     border-radius: 100%!important;
 }
-.p-5 {
-    padding: 6px!important;
-}
-/* .btn-group-lg>.btn, .btn-lg {
-    font-size: 5rem;
-} */
 .blur{
 	color: rgb(104, 104, 104);
 }
@@ -64,10 +62,6 @@ body {
 	font-weight: 800;
 	color: white;
 }
-/* .hover-effect:hover {
-	opacity: 0.5;
-	background-color: #997369;
-  } */
   .w-g {
 	display: flex;
     gap: 20px;
