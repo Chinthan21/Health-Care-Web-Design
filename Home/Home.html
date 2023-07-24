@@ -1,0 +1,946 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap w/ Webpack</title>
+    <!-- All CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+</head>
+
+<body>
+    <div class="container py-3 px-3 mx-auto">
+
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../Register.html">
+                    <img src="../img/EFA_Registered Logo.png" alt="Avatar Logo" style="width:80px;">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav" style="gap: 8rem;">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">
+                                <form class="d-flex" role="search">
+                                    <input class="form-control me-2" type="search" placeholder="Search all forums"
+                                        aria-label="Search">
+                                    <button class="btn btn-outline-success" type="submit">Search</button>
+                                </form>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><select class="form-select form-select-lg mb-3"
+                                    aria-label=".form-select-lg example">
+                                    <option>Topics</option>
+                                    <option value="1">good</option>
+                                    <option value="1">>awesome</option>
+
+                                </select></a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Latest Topic<i class="bi bi-list"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link"><span><i class="bi bi-bell"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                                    <option class="bi bi-c-circle-fill"><i></i> azyrusmax</option>
+                                    <option value="1">gcgcgdg</option>
+                                    <option value="1">>shgsjh</option>
+
+                                </select>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- second nav -->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button> -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav" style="gap: 8rem;">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#"><select
+                                    class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                                    <option>All Categories</option>
+                                    <option value="1">Admit</option>
+                                    <option value="1">>Consult</option>
+
+                                </select></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><select class="form-select form-select-lg mb-3"
+                                    aria-label=".form-select-lg example">
+                                    <option>Tags</option>
+                                    <option value="1">good</option>
+                                    <option value="1">>awesome</option>
+
+                                </select></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link blur" href="#" data-toggle="modal" data-target="#myModal">Latest
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link blur">Unread</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link blur">Rising</a>
+                        </li>
+                        <li class="nav-item blur">
+                            <a class="nav-link blur">Most Liked</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link blur">Fallow Feed</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Headings -->
+        <div class="container text-center">
+            <div class="row align-items-start">
+                <div class="col-md-5 mb-2" style="text-align:left;">
+                    Topic
+                </div>
+                <div class="col-md-2">
+                    Category
+                </div>
+                <div class="col-2">
+                    User
+                </div>
+                <div class="col">
+                    Replies
+                </div>
+                <div class="col">
+                    Views
+                </div>
+                <div class="col">
+                    Activity
+                </div>
+            </div>
+        </div>
+        <div class="container text-center">
+            <div class="card">
+                <div class="row align-items-start">
+
+                    <div class="col-md-5 " style="text-align:left;">
+
+
+                        <div class="card-body">
+
+                            <div class="card-h">
+                                <i class="bi bi-pin-fill"></i>
+                                Welcome Enabler! Please read this before posting!
+                            </div>
+                            Before you make a new topic or post, please read community guildlines.<br />We aim to the
+                            friendliest community for online mental health support.
+                        </div>
+
+                    </div>
+                    <div class="col-md-2 border-padding blur">
+
+                    </div>
+                    <div class="col-md-2 border-padding">
+                        <div class="col">
+                            <button type="button" class="btn btn-info p-5 rounded-circle "
+                                style="background-color: springgreen; border: unset;">B</button>
+                            <button type="button" class="btn btn-info p-5 rounded-circle"
+                                style="background-color:rgb(43, 28, 28); border: unset;">K</button>
+                            <button type="button" class="btn btn-info p-5 rounded-circle "
+                                style="background-color: rgb(182, 138, 88); border: unset;">O</button>
+                        </div>
+                    </div>
+                    <div class="col border-padding">
+                        <div>66</div>
+                    </div>
+                    <div class="col border-padding blur">
+                        15.1k
+                    </div>
+                    <div class="col border-padding blur">
+                        11d
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- row 1-->
+        <div class="container text-center">
+            <div class="">
+                <div class="row align-items-start">
+
+                    <div class="col-md-5" style="text-align:left;">
+                        <div class="card-body">
+                            <div class="card-h">
+                                Current news and discussion
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-2  border-padding blur" style="text-align:start;">
+                        <i class="bi bi-circle-fill" style="color: rgb(84, 202, 143); padding: 4px;"></i>
+
+                        Mental health
+                    </div>
+                    <div class="col-md-2 border-padding">
+                        <div class="col">
+                            <button type="button" class="btn btn-info p-5 rounded-circle "
+                                style="background-color: rgb(167, 70, 146); border: unset;">A</button>
+                            <button type="button" class="btn btn-info p-5 rounded-circle "
+                                style="background-color: rgb(217, 145, 219); border: unset;">G</button>
+                            <button type="button" class="btn btn-info p-5 rounded-circle "
+                                style="background-color: rgb(41, 109, 75); border: unset;">p</button>
+                        </div>
+                    </div>
+                    <div class="col border-padding">
+                        <div>31</div>
+                    </div>
+                    <div class="col border-padding blur">
+                        41.5k
+                    </div>
+                    <div class="col border-padding blur">
+                        13m
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- row 2 -->
+        <div class="container text-center">
+            <div class="">
+                <div class="row align-items-start">
+
+                    <div class="col-md-5" style="text-align:left;">
+                        <div class="card-body">
+                            <div class="card-h">
+                                Non-Urgent Emotional Help
+                                <div class="border-padding" style="padding-left:unset;">
+                                    <span class="text-bg-color" style="background-color: royalblue;">mentalhealth</span>
+                                    <span class="text-bg-color" style="background-color: brown;">enabler</span>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-2  border-padding blur  " style="text-align:start;">
+                        <i class="bi bi-circle-fill" style="color: rgb(56, 68, 133); padding: 4px;"></i>
+                        video
+                    </div>
+                    <div class="col-md-2 border-padding">
+                        <div class="col">
+                            <button type="button" class="btn btn-primary p-5 rounded-circle ">L</button>
+                            <button type="button" class="btn btn-success p-5 rounded-circle ">T</button>
+                        </div>
+                    </div>
+                    <div class="col border-padding">
+                        <div>252</div>
+                    </div>
+                    <div class="col border-padding blur">
+                        396
+                    </div>
+                    <div class="col border-padding blur">
+                        30m
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- row 3 -->
+        <div class="container text-center">
+            <div class="">
+                <div class="row align-items-start">
+                    <div class="col-md-5" style="text-align:left;">
+                        <div class="card-body">
+                            <div class="card-h">
+                                Other ways of Getting help
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-md-2  border-padding blur" style="text-align:start;">
+                        <i class="bi bi-circle-fill" style="color: rgb(78, 202, 211); padding: 4px;"></i>
+                        Mind
+                    </div>
+                    <div class="col-md-2 border-padding">
+                        <div class="col">
+                            <button type="button" class="btn btn-info p-5 rounded-circle "
+                                style="background-color: rgb(52, 54, 53); border: unset;">E</button>
+                            <button type="button" class="btn btn-info p-5 rounded-circle "
+                                style="background-color: rgb(148, 104, 53); border: unset;">I</button>
+                            <button type="button" class="btn btn-info p-5 rounded-circle "
+                                style="background-color: rgb(95, 32, 85); border: unset;">R</button>
+                        </div>
+                    </div>
+                    <div class="col border-padding">
+                        <div>207</div>
+                    </div>
+                    <div class="col border-padding blur">
+                        7.5k
+                    </div>
+                    <div class="col border-padding blur">
+                        41m
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- row 4 -->
+        <div class="container text-center">
+            <div class="">
+                <div class="row align-items-start">
+                    <div class="col-md-5" style="text-align:left;">
+                        <div class="card-body">
+                            <div class="card-h">
+                                How to help a person who self-harms!
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-md-2 border-padding blur" style="text-align:start;">
+                        <i class="bi bi-circle-fill" style="color: rgb(17, 68, 43); padding: 4px;"></i>
+                        Q&A
+                    </div>
+                    <div class="col-md-2 border-padding">
+                        <div class="col">
+                            <button type="button" class="btn btn-info p-5 rounded-circle"
+                                style="background-color: rgb(172, 45, 184); border: unset;">F</button>
+
+                        </div>
+                    </div>
+                    <div class="col border-padding">
+                        <div>2.3k</div>
+                    </div>
+                    <div class="col border-padding blur">
+                        2.0k
+                    </div>
+                    <div class="col border-padding blur">
+                        1h
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- row 5 -->
+        <div class="container text-center">
+            <div class="">
+                <div class="row align-items-start">
+                    <div class="col-md-5" style="text-align:left;">
+                        <div class="card-body">
+                            <div class="card-h">
+                                Feeling overwhelmed
+                                <div class="border-padding" style="padding-left:unset;">
+                                    <span class="text-bg-color" style="background-color: rgb(185, 23, 104);">hope</span>
+                                    <span class="text-bg-color" style="background-color: green;">help</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-md-2 border-padding blur" style="text-align:start;">
+                        <i class="bi bi-circle-fill" style="color: rgb(187, 149, 99); padding: 4px;"></i>
+                        Hope
+                    </div>
+                    <div class="col-md-2 border-padding">
+                        <div class="col">
+                            <button type="button" class="btn btn-info p-5 rounded-circle "
+                                style="background-color: rgb(14, 49, 32); border: unset;">C</button>
+                            <button type="button" class="btn btn-info p-5 rounded-circle "
+                                style="background-color: rgb(152, 160, 48); border: unset;">U</button>
+                            <button type="button" class="btn btn-info p-5 rounded-circle "
+                                style="background-color: rgb(90, 55, 4); border: unset;">I</button>
+                        </div>
+                    </div>
+                    <div class="col border-padding">
+                        <div>441</div>
+                    </div>
+                    <div class="col border-padding blur">
+                        3.1k
+                    </div>
+                    <div class="col border-padding blur">
+                        6h
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- row 6 -->
+        <div class="container text-center">
+            <div class="">
+                <div class="row align-items-start">
+                    <div class="col-md-5" style="text-align:left;">
+                        <div class="card-body">
+                            <div class="card-h">
+                                Should i Tell
+                                <div class="border-padding" style="padding-left:unset;">
+                                    <span class="text-bg-color"
+                                        style="background-color: rgb(62, 66, 75);">neverstop</span>
+                                    <span class="text-bg-color" style="background-color: rgb(41, 47, 80);">doubt</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-md-2 border-padding blur" style="text-align:start;">
+                        <i class="bi bi-circle-fill" style="color: rgb(58, 48, 39); padding: 4px;"></i>
+                        Never Stop
+                    </div>
+                    <div class="col-md-2 border-padding">
+                        <div class="col">
+                            <button type="button" class="btn btn-info p-5 rounded-circle "
+                                style="background-color: rgb(30, 39, 34); border: unset;">K</button>
+                            <button type="button" class="btn btn-info p-5 rounded-circle "
+                                style="background-color: rgb(39, 56, 112); border: unset;">N</button>
+                            <button type="button" class="btn btn-info p-5 rounded-circle "
+                                style="background-color: rgb(34, 43, 39); border: unset;">Q</button>
+                        </div>
+                    </div>
+                    <div class="col border-padding">
+                        <div>1.3k</div>
+                    </div>
+                    <div class="col border-padding blur">
+                        6.0k
+                    </div>
+                    <div class="col border-padding blur">
+                        7h
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- row 7 -->
+        <div class="container text-center">
+            <div class="">
+                <div class="row align-items-start">
+                    <div class="col-md-5" style="text-align:left;">
+                        <div class="card-body">
+                            <div class="card-h">
+                                If you need someone to talk to urgently and in confidence
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-md-2 border-padding blur" style="text-align:start;">
+                        <i class="bi bi-circle-fill" style="color: rgb(145, 231, 137); padding: 4px;"></i>
+                        Emotional Help
+                    </div>
+                    <div class="col-md-2 border-padding">
+                        <div class="col">
+                            <button type="button" class="btn btn-info p-5 rounded-circle "
+                                style="background-color: rgb(12, 143, 78); border: unset;">C</button>
+                            <button type="button" class="btn btn-info p-5 rounded-circle "
+                                style="background-color: rgb(136, 138, 21); border: unset;">W</button>
+                            <button type="button" class="btn btn-info p-5 rounded-circle "
+                                style="background-color: rgb(73, 46, 11); border: unset;">Y</button>
+                        </div>
+                    </div>
+                    <div class="col border-padding">
+                        <div>5.7k</div>
+                    </div>
+                    <div class="col border-padding blur">
+                        33.6k
+                    </div>
+                    <div class="col border-padding blur">
+                        1.3h
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- row 8 -->
+        <div class="container text-center">
+            <div class="">
+                <div class="row align-items-start">
+                    <div class="col-md-5" style="text-align:left;">
+                        <div class="card-body">
+                            <div class="card-h">
+                                Post the weirdest thing you own here!
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-md-2 border-padding blur" style="text-align:start;">
+                        <i class="bi bi-circle-fill" style="color: rgb(37, 51, 44); padding: 4px;"></i>
+                        Education
+                    </div>
+                    <div class="col-md-2 border-padding">
+                        <div class="col">
+                            <button type="button" class="btn btn-info p-5 rounded-circle "
+                                style="background-color: rgb(54, 116, 167); border: unset;">D</button>
+                            <button type="button" class="btn btn-info p-5 rounded-circle "
+                                style="background-color: rgb(199, 110, 194); border: unset;">M</button>
+                            <button type="button" class="btn btn-info p-5 rounded-circle "
+                                style="background-color: rgb(44, 12, 85); border: unset;">R</button>
+                        </div>
+                    </div>
+                    <div class="col border-padding">
+                        <div>236</div>
+                    </div>
+                    <div class="col border-padding blur">
+                        2.3k
+                    </div>
+                    <div class="col border-padding blur">
+                        10h
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- row 9 -->
+        <div class="container text-center">
+            <div class="">
+                <div class="row align-items-start">
+                    <div class="col-md-5" style="text-align:left;">
+                        <div class="card-body">
+                            <div class="card-h">
+                                Show me your awesome photography
+                                <div class="border-padding" style="padding-left:unset;">
+                                    <span class="text-bg-color"
+                                        style="background-color: rgb(250, 72, 27);">photography</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-md-2 border-padding blur" style="text-align:start;">
+                        <i class="bi bi-circle-fill" style="color: rgb(174, 84, 202); padding: 4px;"></i>
+                        Science
+                    </div>
+                    <div class="col-md-2 border-padding">
+                        <div class="col">
+                            <button type="button" class="btn btn-info p-5 rounded-circle "
+                                style="background-color: rgb(62, 65, 63); border: unset;">E</button>
+                            <button type="button" class="btn btn-info p-5 rounded-circle "
+                                style="background-color: rgb(56, 34, 117); border: unset;">R</button>
+                            <button type="button" class="btn btn-info p-5 rounded-circle "
+                                style="background-color: springgreen; border: unset;">T</button>
+                        </div>
+                    </div>
+                    <div class="col border-padding">
+                        <div>3</div>
+                    </div>
+                    <div class="col border-padding blur">
+                        519
+                    </div>
+                    <div class="col border-padding blur">
+                        2d
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- row 10 -->
+        <div class="container text-center">
+            <div class="">
+                <div class="row align-items-start">
+                    <div class="col-md-5" style="text-align:left;">
+                        <div class="card-body">
+                            <div class="card-h">
+                                Prevention Strategies
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-md-2 border-padding blur" style="text-align:start;">
+                        <i class="bi bi-circle-fill" style="color: rgb(69, 185, 127); padding: 4px;"></i>
+                        Random
+                    </div>
+                    <div class="col-md-2 border-padding">
+                        <div class="col">
+                            <button type="button" class="btn btn-info p-5 rounded-circle "
+                                style="background-color: rgb(74, 87, 80); border: unset;">H</button>
+                            <button type="button" class="btn btn-info p-5 rounded-circle "
+                                style="background-color: rgb(146, 64, 156); border: unset;">M</button>
+                            <button type="button" class="btn btn-info p-5 rounded-circle "
+                                style="background-color: rgb(92, 48, 40); border: unset;">Y</button>
+                        </div>
+                    </div>
+                    <div class="col border-padding">
+                        <div>60</div>
+                    </div>
+                    <div class="col border-padding blur">
+                        891
+                    </div>
+                    <div class="col border-padding blur">
+                        1h
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- row 11 -->
+        <div class="container text-center">
+            <div class="">
+                <div class="row align-items-start">
+                    <div class="col-md-5" style="text-align:left;">
+                        <div class="card-body">
+                            <div class="card-h">
+                                Live music
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-md-2 border-padding blur" style="text-align:start;">
+                        <i class="bi bi-circle-fill" style="color: rgb(88, 29, 100); padding: 4px;"></i>
+                        Music
+                    </div>
+                    <div class="col-md-2 border-padding">
+                        <div class="col">
+                            <button type="button" class="btn btn-info p-5 rounded-circle "
+                                style="background-color: rgb(13, 59, 36); border: unset;">L</button>
+                            <button type="button" class="btn btn-info p-5 rounded-circle "
+                                style="background-color: rgb(153, 9, 69); border: unset;">A</button>
+
+                        </div>
+                    </div>
+                    <div class="col border-padding">
+                        <div>587</div>
+                    </div>
+                    <div class="col border-padding blur">
+                        3.8k
+                    </div>
+                    <div class="col border-padding blur">
+                        3d
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- row 12 -->
+        <div class="container text-center">
+            <div class="">
+                <div class="row align-items-start">
+                    <div class="col-md-5" style="text-align:left;">
+                        <div class="card-body">
+                            <div class="card-h">
+                                Racing thoughts
+                                <div class="border-padding" style="padding-left:unset;">
+                                    <span class="text-bg-color"
+                                        style="background-color: rgb(135, 182, 189);">climbing</span>
+                                    <span class="text-bg-color" style="background-color: rgb(48, 90, 107);">funny</span>
+                                    <span class="text-bg-color"
+                                        style="background-color: rgb(156, 51, 121);">adventure</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-md-2 border-padding blur" style="text-align:start;">
+                        <i class="bi bi-circle-fill" style="color: rgb(139, 139, 139); padding: 4px;"></i>
+                        Entertainment
+                    </div>
+                    <div class="col-md-2 border-padding">
+                        <div class="col">
+                            <button type="button" class="btn btn-info p-5 rounded-circle "
+                                style="background-color: rgb(202, 127, 56); border: unset;">I</button>
+                            <button type="button" class="btn btn-info p-5 rounded-circle "
+                                style="background-color: rgb(93, 69, 94); border: unset;">O</button>
+                            <button type="button" class="btn btn-info p-5 rounded-circle "
+                                style="background-color: rgb(54, 56, 55); border: unset;">S</button>
+                        </div>
+                    </div>
+                    <div class="col border-padding">
+                        <div>628</div>
+                    </div>
+                    <div class="col border-padding blur">
+                        997
+                    </div>
+                    <div class="col border-padding blur">
+                        1h
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- row 13 -->
+        <div class="container text-center">
+            <div class="">
+                <div class="row align-items-start">
+                    <div class="col-md-5" style="text-align:left;">
+                        <div class="card-body">
+                            <div class="card-h">
+                                Post your artwork!
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-md-2 border-padding blur" style="text-align:start;">
+                        <i class="bi bi-circle-fill" style="color: rgb(57, 66, 62); padding: 4px;"></i>
+                        Art
+                    </div>
+                    <div class="col-md-2 border-padding">
+                        <div class="col">
+                            <button type="button" class="btn btn-info p-5 rounded-circle "
+                                style="background-color: rgb(81, 85, 83); border: unset;">S</button>
+                            <button type="button" class="btn btn-info p-5 rounded-circle "
+                                style="background-color: rgb(191, 196, 193); border: unset;">G</button>
+                        </div>
+                    </div>
+                    <div class="col border-padding">
+                        <div>147</div>
+                    </div>
+                    <div class="col border-padding blur">
+                        397
+                    </div>
+                    <div class="col border-padding blur">
+                        3h
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- row 14 -->
+        <div class="container text-center">
+            <div class="">
+                <div class="row align-items-start">
+                    <div class="col-md-5" style="text-align:left;">
+                        <div class="card-body">
+                            <div class="card-h">
+                                How to feel normal
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-md-2 border-padding blur" style="text-align:start;">
+                        <i class="bi bi-circle-fill" style="color: rgb(211, 103, 31); padding: 4px;"></i>
+                        Upset
+                    </div>
+                    <div class="col-md-2 border-padding">
+                        <div class="col">
+                            <button type="button" class="btn btn-info p-5 rounded-circle "
+                                style="background-color: rgb(104, 41, 129); border: unset;">K</button>
+                            <button type="button" class="btn btn-info p-5 rounded-circle "
+                                style="background-color: rgb(59, 28, 131); border: unset;">L</button>
+                            <button type="button" class="btn btn-info p-5 rounded-circle "
+                                style="background-color: rgb(124, 39, 120); border: unset;">R</button>
+                        </div>
+                    </div>
+                    <div class="col border-padding">
+                        <div>274</div>
+                    </div>
+                    <div class="col border-padding blur">
+                        2.9k
+                    </div>
+                    <div class="col border-padding blur">
+                        1d
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- row 15 -->
+        <div class="container text-center">
+            <div class="">
+                <div class="row align-items-start">
+                    <div class="col-md-5" style="text-align:left;">
+                        <div class="card-body">
+                            <div class="card-h">
+                                Tell me about your recent dream
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-md-2 border-padding blur" style="text-align:start;">
+                        <i class="bi bi-circle-fill" style="color: rgb(158, 111, 9); padding: 4px;"></i>
+                        Dreams
+                    </div>
+                    <div class="col-md-2 border-padding">
+                        <div class="col">
+                            <button type="button" class="btn btn-info p-5 rounded-circle "
+                                style="background-color: rgb(65, 107, 155); border: unset;">N</button>
+                            <button type="button" class="btn btn-info p-5 rounded-circle "
+                                style="background-color: rgb(77, 78, 78); border: unset;">H</button>
+                        </div>
+                    </div>
+                    <div class="col border-padding">
+                        <div>0</div>
+                    </div>
+                    <div class="col border-padding blur">
+                        42
+                    </div>
+                    <div class="col border-padding blur">
+                        1d
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- row 16 -->
+        <div class="container text-center">
+            <div class="">
+                <div class="row align-items-start">
+                    <div class="col-md-5" style="text-align:left;">
+                        <div class="card-body">
+                            <div class="card-h">
+                                A thread in which you tell users to go to sleep
+                                <div class="border-padding" style="padding-left:unset;">
+                                    <span class="text-bg-color"
+                                        style="background-color: rgb(87, 61, 117);">dreams</span>
+                                    <span class="text-bg-color" style="background-color: rgb(201, 155, 5);">life</span>
+                                    <span class="text-bg-color"
+                                        style="background-color: rgb(71, 132, 201);">reason</span>
+                                    <span class="text-bg-color"
+                                        style="background-color: rgb(22, 61, 134);">social</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-md-2 border-padding blur" style="text-align:start;">
+                        <i class="bi bi-circle-fill" style="color: rgb(9, 73, 41); padding: 4px;"></i>
+                        Social
+                    </div>
+                    <div class="col-md-2 border-padding">
+                        <div class="col">
+                            <button type="button" class="btn btn-info p-5 rounded-circle "
+                                style="background-color: rgb(180, 156, 49); border: unset;">J</button>
+                            <button type="button" class="btn btn-info p-5 rounded-circle "
+                                style="background-color: rgb(156, 157, 161); border: unset;">D</button>
+                            <button type="button" class="btn btn-info p-5 rounded-circle "
+                                style="background-color: rgb(104, 32, 100); border: unset;">Q</button>
+                        </div>
+                    </div>
+                    <div class="col border-padding">
+                        <div>129</div>
+                    </div>
+                    <div class="col border-padding blur">
+                        752
+                    </div>
+                    <div class="col border-padding blur">
+                        19h
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- row 17 -->
+        <div class="container text-center">
+            <div class="">
+                <div class="row align-items-start">
+                    <div class="col-md-5" style="text-align:left;">
+                        <div class="card-body">
+                            <div class="card-h">
+                                What's everyone listening?
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-md-2 border-padding blur" style="text-align:start;">
+                        <i class="bi bi-circle-fill" style="color: rgb(65, 134, 100); padding: 4px;"></i>
+                        Random
+                    </div>
+                    <div class="col-md-2 border-padding">
+                        <div class="col">
+                            <button type="button" class="btn btn-info p-5 rounded-circle "
+                                style="background-color: rgb(50, 78, 64); border: unset;">B</button>
+                            <button type="button" class="btn btn-info p-5 rounded-circle "
+                                style="background-color: rgb(73, 17, 61); border: unset;">M</button>
+                            <button type="button" class="btn btn-info p-5 rounded-circle "
+                                style="background-color: rgb(109, 219, 46); border: unset;"> W</button>
+                        </div>
+                    </div>
+                    <div class="col border-padding">
+                        <div>305</div>
+                    </div>
+                    <div class="col border-padding blur">
+                        2.1k
+                    </div>
+                    <div class="col border-padding blur">
+                        6h
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- row end -->
+        <div class="container text-left">
+            <div class="row  blur "  style="align-items: center;">
+                <div class="col" style="text-align:left;">
+                    <a class="navbar-brand" href="#">
+                        <img src="../img/EFA_Registered Logo.png" alt="Avatar Logo" style="width:80px;">
+                    </a>
+                </div>
+                
+                <div class="col">
+                    Support
+                </div>
+                <div class="col">
+                    About
+                </div>
+                <div class="col">
+                    Contact Us
+                </div>
+                <div class="col">
+                    The Team
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Modal Header</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Some text in the modal.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
